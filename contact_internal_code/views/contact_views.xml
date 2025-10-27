@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_internal_code" model="ir.ui.view">
+        <field name="name">res.partner.form.internal.code</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <!-- Agregar después del campo "name" -->
+            <field name="category_id" position="after">
+                <field name="internal_code" 
+                       string="Codigo Interno" 
+                       placeholder="3400"
+                       help="Internal reference code for the contact"/>
+            </field>
+        </field>
+    </record>
+</odoo>
